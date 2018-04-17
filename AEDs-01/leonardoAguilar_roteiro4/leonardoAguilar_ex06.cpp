@@ -20,11 +20,14 @@ int main(){
     //Declaração das variáveis
     int num, qPar = 0, sImp = 0;
 
-    //Entrada de dados
+
     for(int i = 0; i < 10; i++){
-        cout << "Digite a " << i + 1 <<"ª " << "nota" << endl;
+
+        //Entrada de dados
+        cout << "Digite o " << i + 1 <<"º " << " número:" << endl;
         cin >> num;
-        //Contador e somatório se num for par ou ímpar, respectivamente
+
+        //Contador ou somatório se número for par ou ímpar, respectivamente
         if(num%2 == 0){
             qPar++;
         }
@@ -32,9 +35,11 @@ int main(){
             sImp = sImp + num;
         }
     }
+
     //Saída de dados
     cout << "Quantidade de números pares = " << qPar << endl;
     cout << "Somatório dos números ímpares = " << sImp << endl;
+
 return 0;
 system("PAUSE");
 }

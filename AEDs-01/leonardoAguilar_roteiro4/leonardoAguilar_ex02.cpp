@@ -1,8 +1,8 @@
 /*
 Leonardo Aguilar
-Imprime os números pares de 0 à 50
-Entrada: Não possui entrada!
-Saída: Números pares de 0 à 50
+Imprime os nï¿½meros pares de 0 Ã  50
+Entrada: NÃ£o possui entrada!
+SaÃ­da: NÃºmeros pares de 0 Ã  50
 */
 
 #include <iostream>

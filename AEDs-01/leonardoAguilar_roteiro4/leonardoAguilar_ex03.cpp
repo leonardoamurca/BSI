@@ -1,6 +1,6 @@
 /*
 Leonardo Aguilar
-Imprime os números de 100 á 1 em ordem decrescente
+Imprime os números de 100 à 1 em ordem decrescente
 Entrada: Não possui entrada!
 Saída: Números de 100 à 1
 */
