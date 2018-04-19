@@ -1,38 +1,45 @@
 /*
 Leonardo Aguilar
-
-Entrada:
-Saída:
-
- */
+Imprime a série de Fibonacci dado o limite
+Entrada: Limite
+Saída: Série de Fibanacci
+*/
 
 #include <iostream>
 #include <locale.h>
+#include <windows.h>
 #include <math.h>
+#include <string.h>
 #include <stdlib.h>
+#include <iomanip>
+
+
 
 using namespace std;
 
 int main(){
-	//Inclusão de caracteres especiais
-	setlocale(LC_ALL, "Portuguese");
+    //Inclusão dos caracteres especiais
+    setlocale(LC_ALL, "Portuguese");
 
-	//Declaração das variáveis
-	int n, fat = 0;
+    //Declaração das variáveis
+    int n, ant = 1, atu = 1, prox = 0;
 
-	//Entrada de dados pelo usuário
-    cout << "Digite o número de termos da série de Fibbonacci: " << endl;
+    //Entrada de dados
+    cout << "Digite o limite: " << endl;
     cin >> n;
+    cout << endl;
 
-   for(int = 1; i < n; i = ){
-    if(i == 1){
-        cout << i << endl;
-        i++;
-    }
-    else{
-        cout << i << endl;
-    }
+    //Sequencia de Fibonacci
+    cout << 1 << endl;
+    cout << 1 << endl;
+    for(int i = 0; i < n; i++){
+        prox = atu + ant;
+        ant = atu;
+        atu = prox;
+        cout << prox << endl;
+       }
 
-   }
+
 return 0;
+system("PAUSE");
 }
