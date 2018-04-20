@@ -1,6 +1,6 @@
 /*
 Leonardo Aguilar
-Imprime a soma da sequência 1 + 1/2 + 1/3 + ... + 1/n;
+Imprime a soma da sequência 1 - 1/2 + 1/3 - 1/4 + 1/5 ... + 1/n;
 Entrada: Limite
 Saída: Soma
 */
@@ -36,8 +36,13 @@ int main(){
 
     //Implementação do somatório
    for(float i = 1; i <= n; i++){
-        soma += 1/i;
-   }
+        int aux = i;
+        if(aux%2 == 0){
+            aux = -aux;
+        }
+        soma += (1/(float)aux);
+}
+
 
    //Saída de dados
    cout << "Soma = " << soma << endl;
