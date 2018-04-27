@@ -31,13 +31,12 @@ int main(){
     cin >> ant >> atu;
 
     //Sequência de Ricci
-    cout << ant << endl;
-    cout << atu << endl;
+    cout << ant << " " << atu << " ";
     for(int i = 0; i < n; i++){
         prox = atu + ant;
         ant = atu;
         atu = prox;
-        cout << prox << endl;
+        cout << prox <<" ";
        }
 
 

@@ -34,15 +34,14 @@ int main(){
         cin >> n;
    }
 
-    //Implementação do somatório
+    //Realiza o somatório
    for(float i = 1; i <= n; i++){
         int aux = i;
         if(aux%2 == 0){
             aux = -aux;
         }
         soma += (1/(float)aux);
-}
-
+    }
 
    //Saída de dados
    cout << "Soma = " << soma << endl;

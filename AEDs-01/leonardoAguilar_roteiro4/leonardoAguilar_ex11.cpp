@@ -1,33 +1,63 @@
-/*
-Leonardo Aguilar
-Imprime a série de Ricci
-Entrada: 2 primeiros dígitos,
-Saída: Série de Fibanacci
-*/
-
 #include <iostream>
 #include <locale.h>
-#include <windows.h>
 #include <math.h>
-#include <string.h>
-#include <stdlib.h>
-#include <iomanip>
-
-
+#include <windows.h>
+#include <stdio.h>
+#include <conio.h>
 
 using namespace std;
+int main()
+{
+    setlocale(LC_ALL , "Portuguese");
 
-int main(){
-    //Inclusão dos caracteres especiais
-    setlocale(LC_ALL, "Portuguese");
+    long long nBits, bit, somaOctal=0, somahexa=0, decimal=0, octal=0, hexadecimal=0;
+    int multiplicador1=1, multiplicador2=1, ii=0, iii=0;
+    cout<<"Digite o número de bits que deseja converter: "<<endl;
+    cin>>nBits;
+    for(int i = 0 ; i < nBits ; i++){
+        do{
+            cout<<"Digite o " << i + 1 << "º" << " bit:" << endl;
+            cin>>bit;
+        }while(bit!=0 && bit!=1);
 
-    //Declaração das variáveis
-    int n, bit, somaParcial = 0, octal = 0
 
-    //Entrada de dados
+        iii++;
 
+        decimal+=bit*pow(2,i);
 
+        somaOctal+=bit*pow(2,ii);
+        ii++;
 
-return 0;
-system("PAUSE");
+        somahexa+=bit*pow(2,iii);
+
+        if((i+1)%3==0){
+            octal+=somaOctal*multiplicador1;
+            multiplicador1*=10;
+            somaOctal=0;
+            ii=0;
+        }
+
+        if((i+1)%4==0){
+            hexadecimal+=somahexa*multiplicador2;
+            multiplicador2*=10;
+            somahexa=0;
+            iii=0;
+
+        }
+
+    }
+    if(nBits%3!=0){
+            octal+=somaOctal*multiplicador1;
+    }
+//    if(nBits%4!=0){
+//            hexadecimal+=somahexa*multiplicador2;
+//    }
+
+    cout<<"Decimal: "<<decimal<<endl;
+    cout<<"Octal: "<<octal<<endl;
+    cout<<"Hexadecimal: "<<hex << decimal<<endl;
+
+    system("pause");
+    return 0;
+
 }

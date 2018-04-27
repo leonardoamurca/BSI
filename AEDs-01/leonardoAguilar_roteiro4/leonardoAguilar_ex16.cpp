@@ -21,10 +21,15 @@ int main(){
     float soma = 0, media = 0;
 
     while(n != -1){
-        cout << "Digite um número: " << endl;
+        cout << "Digite um número(Digite -1 para sair): " << endl;
         cin >> n;
-        soma = soma + n;
-        i++;
+        if(n == -1){
+            i = i;
+        }
+        else{
+            soma = soma + n;
+            i++;
+        }
     }
     media = soma/i;
     cout << "Media = " << media << endl;

@@ -1,8 +1,8 @@
 /*
 Leonardo Aguilar
 Calcula o fatorial de N números
-Entrada: n números
-Saída: Quantidade de numeros pares, soma dos números ímpares
+Entrada: número de repetições e número que deseja saber o fatorial
+Saída: Fatorial dos números digitados
 */
 
 #include <iostream>
@@ -17,7 +17,20 @@ int main(){
     setlocale(LC_ALL,"Portuguese");
 
     //Declaração das variáveis
+    float fat = 1, num, n = 0;
 
+    cout << "Digite o número de repetições: " << endl;
+    cin >> n;
+
+    for(int i = 0; i < n; i++){
+        cout << "Digite um número: " << endl;
+        cin >> num;
+        fat = 1;
+        for(int i = num; i > 0; i--){
+            fat = fat*i;
+        }
+    cout << num << "! = " << fat << endl;
+    }
 return 0;
 system("PAUSE");
 }

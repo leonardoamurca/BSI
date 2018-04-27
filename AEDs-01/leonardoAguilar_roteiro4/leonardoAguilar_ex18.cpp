@@ -1,7 +1,7 @@
 /*
 Leonardo Aguilar
 Imprime caracteres da tabela ASCII de 32 à 255
-Saída: media
+Saída: Caracteres da tabela ASCII de 32 à 255
 */
 
 #include <iostream>

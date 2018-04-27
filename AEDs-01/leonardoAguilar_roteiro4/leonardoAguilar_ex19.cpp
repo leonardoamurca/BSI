@@ -1,7 +1,10 @@
 /*
 Leonardo Aguilar
-Imprime caracteres da tabela ASCII de 32 à 255
-Saída: media
+Calcula a média dos números pares e dos números ímpares digitados pelo usuário,
+identifica qual o maior e menor número par e o maior e menor número ímpar e o
+usuário só para de entrar o dados quando é digitado -1.
+Entrada: Números
+Saída: Média dos impares, média dos pares, maior par, maior ímpar, menor par, menor ímpar
 */
 
 #include <iostream>
@@ -18,11 +21,15 @@ int main(){
     //Declaração das variáveis
     int num = 0, spar = 0, simpar = 0, impar = 0, par = 0, pmedia = 0, imedia = 0, imaior = -100000, imenor = 100000, pmaior = -100000, pmenor = 100000;
     while(num >= 0){
-        cout << "Digite um valor:" << endl;
+        //Entrada de dados
+        cout << "Digite um valor(Digite -1 para sair):" << endl;
         cin >> num;
+        //Idenficação se o número digitado é par, ímpar ou igual a -1
         if(num%2 == 0){
+            //Calcula a soma dos números pares e a quantidade de números pares digitados
             spar += num;
             par++;
+            //Identifica qual o maior e o menor número par
             if (num > pmaior){
                 pmaior = num;
             }
@@ -30,9 +37,11 @@ int main(){
                 pmenor = num;
             }
         }
-        else{
+        else if(num%2 != 0 and num > 0){
+            //Calcula a soma dos números ímpares e a quantidade de números ímpares digitados
             simpar += num;
             impar++;
+            //Identifica qual o maior e o menor número ímpar
             if (num > imaior){
                 imaior = num;
             }
@@ -40,12 +49,13 @@ int main(){
                 imenor = num;
 
             }
-
         }
     }
+    //Calcula a média dos números pares e ímpares
     pmedia = spar/par;
-    imedia = impar/impar;
+    imedia = simpar/impar;
 
+    //Saída de dados
     cout << "Media ímpares = " << imedia << endl;
     cout << "MAIOR ímpar = " << imaior << endl;
     cout << "MENOR ímpar = " << imenor << endl;

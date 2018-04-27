@@ -30,13 +30,12 @@ int main(){
     cout << endl;
 
     //Sequencia de Fibonacci
-    cout << 1 << endl;
-    cout << 1 << endl;
+    cout << 1 << " " << 1 << " ";
     for(int i = 0; i < n; i++){
         prox = atu + ant;
         ant = atu;
         atu = prox;
-        cout << prox << endl;
+        cout << prox << " ";
        }
 
 
