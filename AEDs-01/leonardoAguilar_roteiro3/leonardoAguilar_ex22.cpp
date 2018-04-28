@@ -28,7 +28,7 @@ int main(){
 	//Entrada de dados pelo usuário
     cout << "Digite seu CPF (Apenas números): " << endl;
     cin >> cpf;
-    
+
     //Atribui cada dígito do CPF a uma variável
     dig1 = cpf%10;
     dig2 = ( (cpf%100) - dig1 ) / 10;
@@ -41,7 +41,7 @@ int main(){
     dig9 = ( (  (cpf%1000000000) - (dig8*10000000) - (dig7*1000000) - (dig6*100000) - (dig5*10000) - (dig4*1000) - (dig3*100) - (dig2*10) - dig1 ) / 100000000);
     dig10 = ( ( (cpf%10000000000) - (dig9*100000000) - (dig8*10000000) - (dig7*1000000) - (dig6*100000) - (dig5*10000) - (dig4*1000) - (dig3*100) - (dig2*10) - dig1 ) / 1000000000);
     dig11 = ( ( (cpf%100000000000) - (dig10*1000000000) - (dig9*100000000) - (dig8*10000000) - (dig7*1000000) - (dig6*100000) - (dig5*10000) - (dig4*1000) - (dig3*100) - (dig2*10) - dig1) / 10000000000 );
-    
+
     //Cálculo do 1º dígito
     v1 = ( (dig11*10) + (dig10* 9) + (dig9* 8) + (dig8* 7) + (dig7* 6) + (dig6* 5)
     + (dig5* 4) + (dig4* 3) + (dig3* 2) ) % 11;
@@ -52,7 +52,7 @@ int main(){
     else{
         v1 = 11 - v1;
     }
-    
+
     //Cálculo do 2º dígito
     v2 = ( (dig11*11) + (dig10* 10) + (dig9* 9) + (dig8* 8) + (dig7* 7) + (dig6* 6)
     + (dig5* 5) + (dig4* 4) + (dig3* 3) + (v1*2) ) % 11;
@@ -73,7 +73,7 @@ int main(){
         cout << "CPF VÁLIDO!" << endl;
     }
     else {
-        cout << "CPF INVÁLIDO!" << endl;
+        cout << "CPF INVáLIDO!" << endl;
     }
 
 return 0;
