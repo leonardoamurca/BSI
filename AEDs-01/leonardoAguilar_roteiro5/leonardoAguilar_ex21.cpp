@@ -22,19 +22,25 @@ int main(){
     setlocale(LC_ALL, "Portuguese");
 
    //Declaração das variáveis
-   int cod[TAM], opc, codOpera;
+   int cod[TAM], opc, codOpera, i = 0;
    float sal[TAM], dep, saque;
    string naoEncontrada;
 
    //Entrada de dados
-   for(int i = 0; i < TAM; i++){
+   do{
     cout << "Conta " << i+1 << endl;
     cout << "Digite o código: " << endl;
     cin >> cod[i];
-
+    while(cod[i] == cod[i-1]){
+        cout << "Essa conta já existe, digite novamente: " << endl;
+        cin >> cod[i];
+    }
     cout << "Digite o saldo: " << endl;
     cin >> sal[i];
-   }
+    i++;
+   }while(i < TAM);
+
+
    //Loop das operações
    do{
        cout << "=====Menu de Operações=====" << endl;
@@ -121,7 +127,7 @@ int main(){
             }
             cout << naoEncontrada << endl;
             break;
-
+            //Opção para saída
             case 4:
             return EXIT_SUCCESS;
             break;

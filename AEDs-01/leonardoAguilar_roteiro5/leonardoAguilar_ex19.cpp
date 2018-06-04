@@ -1,9 +1,8 @@
 /*
 Leonardo Aguilar
-Os valores das posições de um vetor de 10 posições corresponde ao fatorial
-da posição no vetor.
-Entrada: Não possui entrada!
-Saída: Vetor
+Verifica quais são os 10 primeiros números primos a partir de 100
+Entrada:
+Saída: Números primos
 */
 
 #include <iostream>
@@ -15,46 +14,40 @@ Saída: Vetor
 using namespace std;
 
 //Variável Global
-const int TAM = 1000;
+const int TAM = 10;
 
 int main(){
 
-//    //Inclusão de caracteres especiais
-//    setlocale(LC_ALL, "Portuguese");
-//
-//   //Declaração das variáveis
-//    int j = 100, div = 0, vet[TAM], z = 0, primo = 0;
-//    for (int i = 1; i < j, j < 200; i++){
-//        if(j%i == 0){
-//            div++;
-//            //cout << div << endl;
-//        }
-//        if(j == i){
-//            if(div == 1){
-//                primo++;
-//                vet[z] = j;
-//
-//            }
-//            j++;
-//            div = 0;
-//        }
-//
-//    }
-//    cout << primo << endl;
-//
-//    //Imprime o vetor
-//   cout << "Vetor = [ ";
-//   for(int i = 0; i < 10 ; i++){
-//        cout << vet[i] << " ";
-//   }
-//   cout << "]" << endl;
-//
-//
-//   cout << div << endl;
-//
-////2, 3, 5, 7, 11, 13
+    //Inclusão de caracteres especiais
+    setlocale(LC_ALL, "Portuguese");
 
+    //Declaração das variáveis
 
+   int pri = 0, div = 0, j = 100, vet[TAM], x = 0;
 
+   while(pri < 10){
+        for(int i=1; i<=j;i++){
+            if(j%i == 0){
+                div++;
+            }
+        }
+
+        if(div == 2){
+            vet[x] = j;
+            pri++;
+            x++;
+        }
+        j++;
+        div = 0;
+   }
+
+   cout << "Primos = [ ";
+   for(int i = 0; i < TAM; i++){
+    cout << vet[i] << " ";
+   }
+
+   cout << "]" << endl;
+
+return 0;
 system("PAUSE");
 }

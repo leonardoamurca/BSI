@@ -31,7 +31,6 @@ int main(){
 
    }
 
-
    //Identifica e imprime quais notas estão fora da faixa
    cout << "Notas fora da faixa: ";
    for(int i = 0; i < TAM; i++){
