@@ -6,7 +6,7 @@
 
 using namespace std;
 
-const int LINHA = 4, COLUNA = 2;
+const int LINHA = 2, COLUNA = 5;
 
 int main(){
     float nota[LINHA][COLUNA], media[LINHA], soma = 0;
@@ -17,11 +17,11 @@ int main(){
     }
 
     for(int i = 0; i < LINHA; i++){
-        cout << "Aluno " << i+1 << ": " << endl;
+        cout << "Aluno " << i+1 << "(Nome primeiro):" << endl;
+        cin >> nome[i];
         for(int j = 0; j < COLUNA; j++){
             cin >> nota[i][j];
         }
-        cin >> nome[i];
     }
 
     for(int i = 0; i < LINHA; i++){
@@ -32,9 +32,9 @@ int main(){
         soma = 0;
     }
 
-    for(int i = 0; i < LINHA; i++){
-        cout << media[i] << endl;
-    }
+//    for(int i = 0; i < LINHA; i++){
+//        cout << media[i] << endl;
+//    }
 
     for(int i = 0; i < LINHA; i++){
         cout << nome[i] << endl;

@@ -5,7 +5,7 @@
 
 using namespace std;
 
-const int LINHA = 3, COLUNA = 4;
+const int LINHA = 3, COLUNA = 5;
 
 int main(){
     float mat[LINHA][COLUNA], soma[LINHA], maior = -10000, mLinha;
@@ -34,10 +34,6 @@ int main(){
     cout << " ] " << endl;
 
     cout << "Maior valor soma esta na linha " << mLinha << endl;
-
-
-
-
 
 system("PAUSE");
 return 0;
