@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1551993025 source:/home/dbconrado/git/exemplo-academico/2019/aeds/Ordenacao/main.cpp
+	<iostream>
+	"teste_mesa.hpp"
+
+1551993330 /home/dbconrado/git/exemplo-academico/2019/aeds/Ordenacao/teste_mesa.hpp
+	<iostream>
+	<iomanip>
+	<fstream>
+
+1552058035 source:c:\users\daniel.conrado\aedsiii\ordenacao\main.cpp
+	<iostream>
+	"teste_mesa.hpp"
+
+1552058241 c:\users\daniel.conrado\aedsiii\ordenacao\teste_mesa.hpp
+	<iostream>
+	<iomanip>
+	<fstream>
+
