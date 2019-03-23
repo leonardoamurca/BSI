@@ -1,2 +1,2 @@
 # BSI
-## Atividades desenvolvidas durante o curso de Bacharelado em Sistemas de Informação.
+# Activities developed during the Bachelor's Degree in Information Systems.
